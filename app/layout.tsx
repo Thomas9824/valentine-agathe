@@ -27,9 +27,6 @@ const shadowsIntoLight = Shadows_Into_Light({
 export const metadata: Metadata = {
   title: "Invitation Saint Valentin",
   description: "Une invitation spéciale pour la Saint Valentin",
-  icons: {
-    icon: '/favicon.svg',
-  },
 };
 
 export default function RootLayout({
