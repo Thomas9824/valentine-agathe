@@ -361,7 +361,7 @@ export default function Home() {
           <div className="bg-[rgb(220,218,81)] p-8 max-w-lg overflow-visible" onClick={(e) => e.stopPropagation()}>
             <div className="flex flex-col items-center gap-8">
               <p className="text-3xl text-center text-[rgb(8, 22, 16)] font-bold" style={{ fontFamily: 'var(--font-geist-sans)' }}>
-                Pas grave parce que t'es deja ma valentine toute l'année ma douce <br />
+                Pas grave parce que t'es déja ma valentine toute l'année ma douce <br />
 
 <br />
                 rdv le 14 février à 10h à la mairie de Périgueux <br />
