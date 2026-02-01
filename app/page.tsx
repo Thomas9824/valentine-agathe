@@ -160,6 +160,8 @@ export default function Home() {
             <div
               ref={yesBoxRef}
               onMouseEnter={handleYesHover}
+              onTouchStart={handleYesHover}
+              onClick={handleYesHover}
               style={{
                 transform: `translate(${yesPosition.x}px, ${yesPosition.y}px)`,
                 transition: "transform 0.3s ease-out",
@@ -235,7 +237,15 @@ export default function Home() {
                   ref={yesPopupBoxRef}
                   onMouseEnter={handleYesPopupEnter}
                   onMouseLeave={handleYesPopupLeave}
-                  onClick={isYesPopupHovered ? handleNoPopupClick : undefined}
+                  onTouchStart={handleYesPopupEnter}
+                  onClick={(e) => {
+                    if (isYesPopupHovered) {
+                      handleNoPopupClick();
+                    } else {
+                      handleYesPopupEnter();
+                      e.stopPropagation();
+                    }
+                  }}
                   style={{
                     fontFamily: 'var(--font-shadows-into-light)',
                     transition: "all 0.3s ease-out"
@@ -299,6 +309,8 @@ export default function Home() {
                   {!isYesOrangeHovered && (
                     <div
                       onMouseEnter={handleYesOrangeHover}
+                      onTouchStart={handleYesOrangeHover}
+                      onClick={handleYesOrangeHover}
                       className="flex flex-col items-center gap-3 cursor-pointer"
                       style={{ fontFamily: 'var(--font-shadows-into-light)' }}
                     >
